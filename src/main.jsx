@@ -5,9 +5,13 @@ import './index.css';
 import App from './App';
 import Home from './components/Home';
 import About from './components/About';
+import Admission from './components/Admission';
 import Domain from './components/Domain';
+import PedagogicalProgram from './components/PedagogicalProgram';
 import OurTeam from './components/OurTeam';
 import Outlet from './components/Outlet';
+import TechnologiesSection from './components/Technos';
+import PartnersSection from './components/Partners';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -21,6 +25,10 @@ createRoot(document.getElementById('root')).render(
               <OurTeam />
               <Outlet />
               <Domain />
+              <Admission />
+              <PedagogicalProgram />
+              <TechnologiesSection />
+              <PartnersSection />
             </>
           } />
           <Route path="about" element={<About />} />
