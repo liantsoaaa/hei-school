@@ -30,7 +30,7 @@ const ProgramPage = () => {
                         </p>
 
                         {/* Bouton "Notre Programme" */}
-                        <button className="border-2 border-navy-blue text-navy-blue bg-transparent px-6 py-2 rounded-lg mb-6 transition-all duration-300 hover:bg-navy-blue hover:text-white">
+                        <button className="border-2 border-navy-blue text-navy-blue bg-transparent px-6 py-2 rounded-lg mb-6 transition-all duration-300 hover:bg-blue-900 hover:text-white">
                             Notre Programme
                         </button>
                     </div>
