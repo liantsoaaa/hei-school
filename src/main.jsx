@@ -1,24 +1,33 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import App from './App';
-import Home from './pages/Home';
-import About from './pages/About';
-import Programs from './pages/Programs';
-import Admission from './pages/Admission';
 import './index.css';
+import App from './App';
+import Home from './components/Home';
+import About from './components/About';
+import Domain from './components/Domain';
+import OurTeam from './components/OurTeam';
+import Outlet from './components/Outlet';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
     <Router>
       <Routes>
         <Route path="/" element={<App />}>
-          <Route index element={<Home />} />
+          <Route index element={
+            <>
+              <Home />
+              <About />
+              <OurTeam />
+              <Outlet />
+              <Domain />
+            </>
+          } />
           <Route path="about" element={<About />} />
-          <Route path="programs" element={<Programs />} />
-          <Route path="admission" element={<Admission />} />
+          <Route path="programs" element={<Domain />} />
+          <Route path="team" element={<OurTeam />} />
         </Route>
       </Routes>
     </Router>
-  </React.StrictMode>
+  </StrictMode>
 );
