@@ -62,13 +62,13 @@ const Home = () => {
                                 <h1 className="text-4xl md:text-5xl font-bold mb-12 leading-tight">{banner.title}</h1>
                                 <p className="text-xl md:text-2xl mb-16 leading-relaxed max-w-3xl mx-auto">{banner.description}</p>
                                 <div className="flex flex-col sm:flex-row justify-center gap-7 mb-6">
-                                    <button className="bg-white text-[#001F5B] px-8 py-3.5 rounded-lg font-semibold text-lg hover:bg-gray-100 transition">
+                                    <button className="bg-white text-[#001F5B] px-8 py-3.5 rounded-lg font-semibold text-lg hover:bg-gray-100 transition cursor-pointer">
                                         Inscrivez-vous ici
                                     </button>
-                                    <button className="bg-yellow-500 border-2 border-yellow-500 text-white px-8 py-3.5 rounded-lg font-semibold text-lg hover:bg-white hover:text-[#001F5B] transition">
+                                    <button className="bg-yellow-500 border-2 border-yellow-500 text-white px-8 py-3.5 rounded-lg font-semibold text-lg hover:bg-yellow-500 cursor-pointer">
                                         Emploi du temps
                                     </button>
-                                    <button className="bg-[#001F5B] border-2 border-[#001F5B] text-white px-8 py-3.5 rounded-lg font-semibold text-lg hover:bg-white hover:text-[#001F5B] transition">
+                                    <button className="bg-[#001F5B] border-2 border-[#001F5B] text-white px-8 py-3.5 rounded-lg font-semibold text-lg hover:bg-[#001F5B] cursor-pointer">
                                         Programme pédagogique
                                     </button>
                                 </div>

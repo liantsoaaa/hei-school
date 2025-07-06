@@ -14,35 +14,46 @@ const Domain = () => {
         {
             title: "Intelligence artificielle",
             description:
-                "Le monde de la reconnaissance faciale ou la détection d’obstacles par les voitures semi-autonomes vous fascinent ? Ce n’est pas sorcier, cela s’apprend. Apprenez les bases de l’intelligence artificielle lors de vos cours chez HEI.",
+                "Le monde de la reconnaissance faciale ou la détection d'obstacles par les voitures semi-autonomes vous fascinent ? Ce n'est pas sorcier, cela s'apprend. Apprenez les bases de l'intelligence artificielle lors de vos cours chez HEI.",
             image: ai,
         },
         {
             title: "Ingénierie logicielle",
             description:
-                "Apprenez les principes de la conception ou le développement de programmes et d’applications web et mobile et explorez le monde fascinant des “codes”. À la fin de votre formation, vous serez aptes à proposer des solutions pratiques, créatives et innovantes à des particuliers ou des entreprises pour leurs besoins numériques.",
+                "Apprenez les principes de la conception ou le développement de programmes et d'applications web et mobile et explorez le monde fascinant des 'codes'. À la fin de votre formation, vous serez aptes à proposer des solutions pratiques, créatives et innovantes à des particuliers ou des entreprises pour leurs besoins numériques.",
             image: logiciel,
         },
     ];
 
     return (
-        <div className="bg-gray-100 py-10">
-            <h2 className="text-3xl font-bold text-center mb-6">Domaines</h2>
-            <p className="text-center mb-10 text-gray-700 max-w-2xl mx-auto">
-                Au cours de vos trois ans de formation, naviguez entre les domaines les plus porteurs du numérique du présent et de l’avenir :
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto px-4">
-                {domains.map((domain, index) => (
-                    <div key={index} className="text-center bg-white p-6 rounded-lg shadow-md">
-                        <img
-                            src={domain.image}
-                            alt={domain.title}
-                            className="w-32 h-32 mx-auto mb-4 object-cover"
-                        />
-                        <h3 className="text-xl font-semibold text-blue-900 mb-2">{domain.title}</h3>
-                        <p className="text-gray-600">{domain.description}</p>
-                    </div>
-                ))}
+        <div className="bg-gray-100 py-16 px-6 md:px-12 lg:px-24">
+            <div className="max-w-7xl mx-auto">
+                <h1 className="text-3xl md:text-4xl font-bold text-[#001F5B] mb-6 text-center">
+                    Domaines
+                </h1>
+                <p className="text-lg text-gray-700 mb-12 text-center max-w-3xl mx-auto">
+                    Au cours de vos trois ans de formation, naviguez entre les domaines les plus porteurs du numérique du présent et de l'avenir :
+                </p>
+                
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    {domains.map((domain, index) => (
+                        <div key={index} className="bg-white p-8 rounded-lg shadow-lg">
+                            <div className="flex flex-col items-center text-center">
+                                <img
+                                    src={domain.image}
+                                    alt={domain.title}
+                                    className="w-40 h-40 mb-6 object-cover"
+                                />
+                                <h2 className="text-2xl font-bold text-[#001F5B] mb-4">
+                                    {domain.title}
+                                </h2>
+                                <p className="text-gray-700 leading-relaxed">
+                                    {domain.description}
+                                </p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
     );
